@@ -1,0 +1,15 @@
+
+{
+  "normal": {
+    "samples": 1000,
+    "type_of_request": ["GET", "POST"],
+    "request_rate": {"dist": "normal", "loc": 10, "scale": 3},
+    "failed_requests": {"dist": "poisson", "lam": 1}
+  },
+  "anomaly": {
+    "samples": 50,
+    "type_of_request": ["GET", "POST"],
+    "request_rate": {"dist": "normal", "loc": 200, "scale": 50},
+    "failed_requests": {"dist": "poisson", "lam": 50}
+  }
+}
